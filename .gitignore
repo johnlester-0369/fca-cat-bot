@@ -9,3 +9,5 @@ session.json
 device-100000102698581.json
 
 outbound_frames.log
+
+dist/

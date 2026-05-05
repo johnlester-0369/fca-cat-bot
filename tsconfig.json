@@ -20,8 +20,7 @@
     "allowJs": true,
     /* Path Mapping */
     "ignoreDeprecations": "6.0",
-    "baseUrl": "./src",
-    "rootDirs": ["./src"]
+    "baseUrl": "./src"
   },
   "include": ["src"]
 }

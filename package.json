@@ -1,18 +1,22 @@
 {
   "name": "fca-cat-bot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "source": "./src/index.ts",
-      "import": "./src/index.ts",
-      "default": "./src/index.ts"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "scripts": {
-    "dev": "tsx watch src/test.ts"
+    "dev": "tsx watch src/test.ts",
+    "build:e2ee": "npm run build --workspace=lib/FB-Messenger-E2EE",
+    "build": "npm run build:e2ee && tsc --noCheck",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +27,7 @@
     "lib/fca-unofficial"
   ],
   "dependencies": {
-    "@johnlester-0369/fb-messenger-e2ee": "^0.1.0",
+    "@johnlester-0369/fb-messenger-e2ee": "^0.1.1",
     "@johnlester-0369/fca-unofficial": "^3.0.35"
   },
   "devDependencies": {
