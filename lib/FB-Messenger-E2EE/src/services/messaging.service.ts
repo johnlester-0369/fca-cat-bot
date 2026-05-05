@@ -1,7 +1,7 @@
-import type { MinimalFCAApi } from "./facebook-gateway.service.ts";
+import type { MinimalFCAApi } from "./facebook-gateway.service.js";
 
-import type { MarkReadInput, SendMessageInput, SendReactionInput, TypingInput } from "../models/messaging.ts";
-import { FacebookGatewayService } from "./facebook-gateway.service.ts";
+import type { MarkReadInput, SendMessageInput, SendReactionInput, TypingInput } from "../models/messaging.js";
+import { FacebookGatewayService } from "./facebook-gateway.service.js";
 
 export class MessagingService {
   public constructor(private readonly gateway: FacebookGatewayService) {}

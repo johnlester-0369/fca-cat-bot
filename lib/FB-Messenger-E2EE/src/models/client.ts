@@ -1,4 +1,4 @@
-import type { MessengerEvent, Platform } from "./domain.ts";
+import type { MessengerEvent, Platform } from "./domain.js";
 
 export interface ClientOptions {
   appStatePath?: string;

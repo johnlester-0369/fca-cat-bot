@@ -1,6 +1,6 @@
 import { resolve } from "node:path";
 
-import type { AppEnv } from "../models/config.ts";
+import type { AppEnv } from "../models/config.js";
 
 export function loadEnv(): AppEnv {
   const appStatePath = process.env.FB_APPSTATE_PATH ?? "./data/appstate.json";

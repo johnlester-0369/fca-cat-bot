@@ -23,16 +23,16 @@ import {
 } from "@signalapp/libsignal-client";
 import { randomUUID } from "node:crypto";
 
-import type { DeviceStore } from "../store/device-store.ts";
-import type { RawPreKeyBundle } from "./prekey-manager.ts";
-import { buildPreKeyBundle } from "./prekey-manager.ts";
+import type { DeviceStore } from "../store/device-store.js";
+import type { RawPreKeyBundle } from "./prekey-manager.js";
+import { buildPreKeyBundle } from "./prekey-manager.js";
 import {
   wrapAsSignalSKMSG,
   parseFBProtobufSKMSG,
   stableDistributionId,
   uuidStringify,
-} from "../facebook/facebook-protocol-utils.ts";
-import { logger } from "../../utils/logger.ts";
+} from "../facebook/facebook-protocol-utils.js";
+import { logger } from "../../utils/logger.js";
 
 /**
  * Cast for strict libsignal params.

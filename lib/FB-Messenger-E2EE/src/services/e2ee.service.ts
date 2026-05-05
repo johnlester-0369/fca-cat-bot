@@ -23,10 +23,10 @@ import type {
   E2EESendStickerOptions,
   E2EESendVideoOptions,
   E2EEUploadResult,
-} from "../models/e2ee.ts";
-import type { E2EEClient } from "../e2ee/application/e2ee-client.ts";
-import type { MediaUploadConfig } from "../models/media.ts";
-import { MediaType, type MediaTypeKey } from "../e2ee/media/media-crypto.ts";
+} from "../models/e2ee.js";
+import type { E2EEClient } from "../e2ee/application/e2ee-client.js";
+import type { MediaUploadConfig } from "../models/media.js";
+import { MediaType, type MediaTypeKey } from "../e2ee/media/media-crypto.js";
 
 export class E2EEService {
   private _connected = false;

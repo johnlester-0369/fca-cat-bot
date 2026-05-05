@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 
-import type { SessionData, SessionRepository } from "../models/client.ts";
+import type { SessionData, SessionRepository } from "../models/client.js";
 
 export class FileSessionRepository implements SessionRepository {
   public async read(path: string): Promise<SessionData | null> {

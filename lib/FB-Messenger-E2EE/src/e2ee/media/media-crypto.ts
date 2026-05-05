@@ -7,7 +7,7 @@
  */
 
 import { createCipheriv, createDecipheriv, createHmac, hkdfSync, randomBytes, createHash } from "node:crypto";
-import type { DecryptMediaOptions, EncryptMediaResult, MediaKeys } from "../../models/media.ts";
+import type { DecryptMediaOptions, EncryptMediaResult, MediaKeys } from "../../models/media.js";
 export type { DecryptMediaOptions, EncryptMediaResult, MediaKeys };
 
 // Media type -> HKDF info string

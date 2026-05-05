@@ -3,8 +3,8 @@ import type {
   SignedPreKeyRecord,
   KyberPreKeyRecord,
 } from "@signalapp/libsignal-client";
-import type { MediaTypeKey } from "../e2ee/media/media-crypto.ts";
-import type { MmsTypeStr } from "./media.ts";
+import type { MediaTypeKey } from "../e2ee/media/media-crypto.js";
+import type { MmsTypeStr } from "./media.js";
 
 // Storage & Keys
 
@@ -135,7 +135,7 @@ export interface E2EESendTextResult {
 export interface E2EEEncryptMediaOptions {
   type: MediaTypeKey;
   data: Buffer;
-  mmsType: MmsTypeStr; // From media-upload.ts
+  mmsType: MmsTypeStr; // From media-upload.js
 }
 
 export interface E2EEEncryptMediaResult {

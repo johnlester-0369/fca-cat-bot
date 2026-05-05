@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import type { DeviceJSON } from "../../models/e2ee.ts";
-import { parseDeviceJSON } from "./device-json.ts";
+import type { DeviceJSON } from "../../models/e2ee.js";
+import { parseDeviceJSON } from "./device-json.js";
 
 export function readDeviceJSONFile(path: string): DeviceJSON | null {
   if (!existsSync(path)) return null;

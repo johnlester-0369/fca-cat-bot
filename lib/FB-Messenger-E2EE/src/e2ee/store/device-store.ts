@@ -29,7 +29,7 @@ import {
   SignedPreKeyRecord,
   SignedPreKeyStore,
 } from "@signalapp/libsignal-client";
-import { logger } from "../../utils/logger.ts";
+import { logger } from "../../utils/logger.js";
 import {
   DEVICE_STORE_SCHEMA_VERSION,
   base64RecordFromMap,
@@ -38,13 +38,13 @@ import {
   mapFromBase64Record,
   migrateDeviceJSON,
   parseDeviceJSON,
-} from "./device-json.ts";
-import { readDeviceJSONFile, writeDeviceJSONFile } from "./device-repository.ts";
+} from "./device-json.js";
+import { readDeviceJSONFile, writeDeviceJSONFile } from "./device-repository.js";
 
 /** Cast for strict libsignal params */
 const u8 = (b: Buffer | Uint8Array): Buffer => Buffer.isBuffer(b) ? b : Buffer.from(b.buffer, b.byteOffset, b.byteLength);
 
-import type { DeviceJSON, NoiseKeyPair, ProtocolAddressStr, SenderKeyId } from "../../models/e2ee.ts";
+import type { DeviceJSON, NoiseKeyPair, ProtocolAddressStr, SenderKeyId } from "../../models/e2ee.js";
 export type { DeviceJSON, NoiseKeyPair, ProtocolAddressStr, SenderKeyId };
 
 // DeviceStore

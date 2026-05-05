@@ -1,4 +1,4 @@
-import { now } from "../../utils/fca-utils.ts";
+import { now } from "../../utils/fca-utils.js";
 
 export interface RecentE2EEOutgoing {
   kind: "dm" | "group";

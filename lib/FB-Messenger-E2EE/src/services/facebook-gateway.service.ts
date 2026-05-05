@@ -2,7 +2,7 @@ import { Readable } from "node:stream";
 import { Buffer } from "node:buffer";
 
 import { createHmac, createHash } from "node:crypto";
-import { logger } from "../utils/logger.ts";
+import { logger } from "../utils/logger.js";
 
 // Minimal interface covering only the FCA methods used internally by this gateway.
 // The full fca-unofficial API is passed in by the caller.

@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
-import type { MessageTransportOptions } from "../../../models/e2ee.ts";
-import { FB_MESSAGE_APPLICATION_VERSION } from "../constants.ts";
-import { ProtoWriter } from "../proto/proto-writer.ts";
+import type { MessageTransportOptions } from "../../../models/e2ee.js";
+import { FB_MESSAGE_APPLICATION_VERSION } from "../constants.js";
+import { ProtoWriter } from "../proto/proto-writer.js";
 
 export type { MessageTransportOptions };
 

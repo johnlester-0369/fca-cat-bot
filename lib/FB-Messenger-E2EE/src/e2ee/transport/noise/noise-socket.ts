@@ -1,8 +1,8 @@
 import { EventEmitter } from "node:events";
-import { doHandshake } from "./noise-handshake.ts";
-import type { NoiseSocket, RawWebSocket } from "../../../models/e2ee.ts";
-import { encodeKeepAlive, unmarshal } from "../binary/wa-binary.ts";
-import { logger } from "../../../utils/logger.ts";
+import { doHandshake } from "./noise-handshake.js";
+import type { NoiseSocket, RawWebSocket } from "../../../models/e2ee.js";
+import { encodeKeepAlive, unmarshal } from "../binary/wa-binary.js";
+import { logger } from "../../../utils/logger.js";
 
 export class FacebookE2EESocket extends EventEmitter {
   private ws: WebSocket | null = null;

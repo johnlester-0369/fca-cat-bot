@@ -1,6 +1,6 @@
-import { now } from "../../utils/fca-utils.ts";
-import { logger } from "../../utils/logger.ts";
-import { MIN_PREKEY_COUNT, WANTED_PREKEY_COUNT } from "../signal/prekey-manager.ts";
+import { now } from "../../utils/fca-utils.js";
+import { logger } from "../../utils/logger.js";
+import { MIN_PREKEY_COUNT, WANTED_PREKEY_COUNT } from "../signal/prekey-manager.js";
 
 export interface PreKeyMaintenanceOptions {
   getSocket: () => unknown | null;

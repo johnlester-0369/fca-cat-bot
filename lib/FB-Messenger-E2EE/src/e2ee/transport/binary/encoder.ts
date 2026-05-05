@@ -1,5 +1,5 @@
-import type { Node } from "./decoder.ts";
-import { BinaryToken, DoubleTokenToIndex, TokenToIndex } from "./tokens.ts";
+import type { Node } from "./decoder.js";
+import { BinaryToken, DoubleTokenToIndex, TokenToIndex } from "./tokens.js";
 
 export function marshal(node: Node | Buffer): Buffer {
   const buf = Buffer.isBuffer(node) ? node : encodeNode(node.tag, node.attrs as Record<string, string>, node.content);

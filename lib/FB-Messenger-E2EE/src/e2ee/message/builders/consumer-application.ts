@@ -1,5 +1,5 @@
-import type { MediaFields } from "../../../models/e2ee.ts";
-import { ProtoWriter } from "../proto/proto-writer.ts";
+import type { MediaFields } from "../../../models/e2ee.js";
+import { ProtoWriter } from "../proto/proto-writer.js";
 
 export type { MediaFields };
 

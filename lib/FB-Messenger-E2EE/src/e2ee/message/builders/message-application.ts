@@ -1,6 +1,6 @@
 import { createHmac, randomBytes } from "node:crypto";
-import { FB_CONSUMER_MESSAGE_VERSION } from "../constants.ts";
-import { ProtoWriter } from "../proto/proto-writer.ts";
+import { FB_CONSUMER_MESSAGE_VERSION } from "../constants.js";
+import { ProtoWriter } from "../proto/proto-writer.js";
 
 // MessageApplication encoding
 

@@ -23,8 +23,8 @@ import {
   diffieHellman,
 } from "node:crypto";
 import { inflateSync } from "node:zlib";
-import type { HandshakeResult, NoiseSocket, RawWebSocket } from "../../../models/e2ee.ts";
-import { logger } from "../../../utils/logger.ts";
+import type { HandshakeResult, NoiseSocket, RawWebSocket } from "../../../models/e2ee.js";
+import { logger } from "../../../utils/logger.js";
 export type { HandshakeResult, NoiseSocket, RawWebSocket };
 
 // X25519 Helpers using node:crypto

@@ -1,5 +1,5 @@
-import { str, num, now } from "../utils/fca-utils.ts";
-import type { EventMapper } from "./event-mapper.ts";
+import { str, num, now } from "../utils/fca-utils.js";
+import type { EventMapper } from "./event-mapper.js";
 
 export class DGWHandler {
   private readonly seenDGWMessageIds = new Set<string>();

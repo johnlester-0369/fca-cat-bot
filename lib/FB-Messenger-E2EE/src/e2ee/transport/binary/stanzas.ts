@@ -1,4 +1,4 @@
-import { encodeNode, marshal } from "./encoder.ts";
+import { encodeNode, marshal } from "./encoder.js";
 
 const UNIFIED_OFFSET_MS = 3 * 24 * 60 * 60 * 1000;
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;

@@ -1,4 +1,4 @@
-import { ProtoWriter } from "../proto/proto-writer.ts";
+import { ProtoWriter } from "../proto/proto-writer.js";
 
 export interface ClientPayloadOptions {
   username: bigint;

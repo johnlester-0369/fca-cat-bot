@@ -1,8 +1,8 @@
 import { createHash } from "node:crypto";
 import { PrivateKey } from "@signalapp/libsignal-client";
-import { encodeICDCIdentityList, encodeSignedICDCIdentityList } from "../e2ee/facebook/icdc-payload.ts";
-import type { DeviceStore } from "../e2ee/store/device-store.ts";
-import { logger } from "../utils/logger.ts";
+import { encodeICDCIdentityList, encodeSignedICDCIdentityList } from "../e2ee/facebook/icdc-payload.js";
+import type { DeviceStore } from "../e2ee/store/device-store.js";
+import { logger } from "../utils/logger.js";
 
 export interface ICDCFetchResponse {
   device_identities: string[];

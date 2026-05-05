@@ -1,6 +1,6 @@
 import { EventEmitter } from "node:events";
 import { randomUUID } from "node:crypto";
-import type { MinimalFCAApi } from "../services/facebook-gateway.service.ts";
+import type { MinimalFCAApi } from "../services/facebook-gateway.service.js";
 
 import {
   unmarshal,
@@ -11,39 +11,39 @@ import {
   encodePresenceAvailable,
   encodePrimingNode,
   encodeSetPassive,
-} from "../e2ee/transport/binary/wa-binary.ts";
-import type { DGWEndpointKind } from "../e2ee/transport/dgw/dgw-socket.ts";
-import type { Node } from "../e2ee/transport/binary/wa-binary.ts";
-import type { SessionData, ConnectE2EEOptions } from "../models/client.ts";
-import type { MediaUploadConfig } from "../models/media.ts";
-import type { MediaFields } from "../models/e2ee.ts";
+} from "../e2ee/transport/binary/wa-binary.js";
+import type { DGWEndpointKind } from "../e2ee/transport/dgw/dgw-socket.js";
+import type { Node } from "../e2ee/transport/binary/wa-binary.js";
+import type { SessionData, ConnectE2EEOptions } from "../models/client.js";
+import type { MediaUploadConfig } from "../models/media.js";
+import type { MediaFields } from "../models/e2ee.js";
 import type {
   SendMediaInput,
   SendMessageInput,
   SendReactionInput,
   TypingInput,
-} from "../models/messaging.ts";
-import type { AuthConfig } from "../models/config.ts";
-import { AuthService } from "../services/auth.service.ts";
-import type { E2EEService } from "../services/e2ee.service.ts";
-import { FacebookGatewayService } from "../services/facebook-gateway.service.ts";
-import { MediaService } from "../services/media.service.ts";
-import { ICDCService } from "../services/icdc.service.ts";
-import { DeviceStore } from "../e2ee/store/device-store.ts";
-import { E2EEClient } from "../e2ee/application/e2ee-client.ts";
-import type { MediaTypeKey } from "../e2ee/media/media-crypto.ts";
-import { FacebookE2EESocket } from "../e2ee/transport/noise/noise-socket.ts";
-import { FacebookDGWSocket } from "../e2ee/transport/dgw/dgw-socket.ts";
-import { encodeClientPayload } from "../e2ee/message/message-builder.ts";
-import { str, now } from "../utils/fca-utils.ts";
-import { inferMimeTypeFromFileName } from "../utils/mime.ts";
-import { logger } from "../utils/logger.ts";
-import { EventMapper } from "./event-mapper.ts";
-import { DGWHandler } from "./dgw-handler.ts";
-import { E2EEHandler } from "./e2ee-handler.ts";
-import { OutboundMessageCache } from "../e2ee/application/outbound-message-cache.ts";
-import { E2EERetryManager } from "../e2ee/application/retry-manager.ts";
-import { PreKeyMaintenance } from "../e2ee/application/prekey-maintenance.ts";
+} from "../models/messaging.js";
+import type { AuthConfig } from "../models/config.js";
+import { AuthService } from "../services/auth.service.js";
+import type { E2EEService } from "../services/e2ee.service.js";
+import { FacebookGatewayService } from "../services/facebook-gateway.service.js";
+import { MediaService } from "../services/media.service.js";
+import { ICDCService } from "../services/icdc.service.js";
+import { DeviceStore } from "../e2ee/store/device-store.js";
+import { E2EEClient } from "../e2ee/application/e2ee-client.js";
+import type { MediaTypeKey } from "../e2ee/media/media-crypto.js";
+import { FacebookE2EESocket } from "../e2ee/transport/noise/noise-socket.js";
+import { FacebookDGWSocket } from "../e2ee/transport/dgw/dgw-socket.js";
+import { encodeClientPayload } from "../e2ee/message/message-builder.js";
+import { str, now } from "../utils/fca-utils.js";
+import { inferMimeTypeFromFileName } from "../utils/mime.js";
+import { logger } from "../utils/logger.js";
+import { EventMapper } from "./event-mapper.js";
+import { DGWHandler } from "./dgw-handler.js";
+import { E2EEHandler } from "./e2ee-handler.js";
+import { OutboundMessageCache } from "../e2ee/application/outbound-message-cache.js";
+import { E2EERetryManager } from "../e2ee/application/retry-manager.js";
+import { PreKeyMaintenance } from "../e2ee/application/prekey-maintenance.js";
 import {
   buildParticipantListHash,
   normalizeDMThreadToJid,
@@ -51,7 +51,7 @@ import {
   sameMessengerUser,
   toBareMessengerJid,
   uniqueJids,
-} from "../e2ee/application/fanout-planner.ts";
+} from "../e2ee/application/fanout-planner.js";
 
 type E2EEDMMediaType = Extract<MediaTypeKey, "image" | "video" | "audio" | "document">;
 

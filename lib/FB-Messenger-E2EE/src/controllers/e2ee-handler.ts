@@ -5,26 +5,26 @@ import {
   encodeNode,
   encodePreKeyUpload,
   type Node
-} from "../e2ee/transport/binary/wa-binary.ts";
+} from "../e2ee/transport/binary/wa-binary.js";
 import {
   decodeMessageTransport,
   decodeMessageApplication,
   decodeConsumerApplication,
   decodeArmadillo,
   ProtoWriter
-} from "../e2ee/message/message-builder.ts";
+} from "../e2ee/message/message-builder.js";
 import {
   generatePreKeys,
   generateSignedPreKey
-} from "../e2ee/signal/prekey-manager.ts";
-import { str, num, now } from "../utils/fca-utils.ts";
-import type { DeviceStore } from "../e2ee/store/device-store.ts";
-import type { FacebookE2EESocket } from "../e2ee/transport/noise/noise-socket.ts";
-import type { E2EEClient } from "../e2ee/application/e2ee-client.ts";
-import type { EventMapper } from "./event-mapper.ts";
-import type { RawPreKeyBundle } from "../models/e2ee.ts";
-import type { MediaUploadConfig } from "../models/media.ts";
-import { logger } from "../utils/logger.ts";
+} from "../e2ee/signal/prekey-manager.js";
+import { str, num, now } from "../utils/fca-utils.js";
+import type { DeviceStore } from "../e2ee/store/device-store.js";
+import type { FacebookE2EESocket } from "../e2ee/transport/noise/noise-socket.js";
+import type { E2EEClient } from "../e2ee/application/e2ee-client.js";
+import type { EventMapper } from "./event-mapper.js";
+import type { RawPreKeyBundle } from "../models/e2ee.js";
+import type { MediaUploadConfig } from "../models/media.js";
+import { logger } from "../utils/logger.js";
 
 type RetryReceiptHandler = (node: Node) => void | Promise<void>;
 

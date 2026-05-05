@@ -8,8 +8,8 @@ interface CookieData {
   expires?: number;
 }
 
-import type { AuthConfig } from "../models/config.ts";
-import type { SessionData, SessionRepository } from "../models/client.ts";
+import type { AuthConfig } from "../models/config.js";
+import type { SessionData, SessionRepository } from "../models/client.js";
 
 export class AuthService {
   public constructor(private readonly sessionRepository: SessionRepository) {}

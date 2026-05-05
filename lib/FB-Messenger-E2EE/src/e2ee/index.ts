@@ -4,26 +4,26 @@
  */
 
 // Client orchestrator
-export { E2EEClient } from "./application/e2ee-client.ts";
+export { E2EEClient } from "./application/e2ee-client.js";
 export type {
   E2EESendTextOptions,
   E2EESendTextResult,
   E2EEEncryptMediaOptions,
   E2EEEncryptMediaResult,
   E2EEDecryptMediaOptions,
-} from "./application/e2ee-client.ts";
+} from "./application/e2ee-client.js";
 
 // Device store
-export { DeviceStore } from "./store/device-store.ts";
-export type { DeviceJSON, NoiseKeyPair } from "./store/device-store.ts";
+export { DeviceStore } from "./store/device-store.js";
+export type { DeviceJSON, NoiseKeyPair } from "./store/device-store.js";
 
 // Media crypto (can be used standalone)
-export { encryptMedia, decryptMedia, expandMediaKey, sha256, MediaType, MmsType } from "./media/media-crypto.ts";
-export type { MediaTypeKey, MediaKeys, EncryptMediaResult, DecryptMediaOptions } from "./media/media-crypto.ts";
+export { encryptMedia, decryptMedia, expandMediaKey, sha256, MediaType, MmsType } from "./media/media-crypto.js";
+export type { MediaTypeKey, MediaKeys, EncryptMediaResult, DecryptMediaOptions } from "./media/media-crypto.js";
 
 // Media upload
-export { uploadMedia } from "./media/media-upload.ts";
-export type { MediaUploadConfig, MediaUploadResult, MmsTypeStr } from "./media/media-upload.ts";
+export { uploadMedia } from "./media/media-upload.js";
+export type { MediaUploadConfig, MediaUploadResult, MmsTypeStr } from "./media/media-upload.js";
 
 // Signal manager (lower level)
 export {
@@ -38,7 +38,7 @@ export {
   createSenderKeyDistributionMessage,
   processSKDM,
   hasSession,
-} from "./signal/signal-manager.ts";
+} from "./signal/signal-manager.js";
 
 // PreKey manager
 export {
@@ -49,8 +49,8 @@ export {
   INITIAL_PREKEY_COUNT,
   WANTED_PREKEY_COUNT,
   MIN_PREKEY_COUNT,
-} from "./signal/prekey-manager.ts";
-export type { GeneratedPreKey, PreKeyUploadPayload, RawPreKeyBundle } from "./signal/prekey-manager.ts";
+} from "./signal/prekey-manager.js";
+export type { GeneratedPreKey, PreKeyUploadPayload, RawPreKeyBundle } from "./signal/prekey-manager.js";
 
 // Message builder
 export {
@@ -68,9 +68,9 @@ export {
   FB_MESSAGE_VERSION,
   FB_MESSAGE_APPLICATION_VERSION,
   FB_CONSUMER_MESSAGE_VERSION,
-} from "./message/message-builder.ts";
-export type { MediaFields, MessageTransportOptions } from "./message/message-builder.ts";
+} from "./message/message-builder.js";
+export type { MediaFields, MessageTransportOptions } from "./message/message-builder.js";
 
 // Noise handshake
-export { doHandshake, WA_CERT_PUB_KEY, WA_HEADER } from "./transport/noise/noise-handshake.ts";
-export type { NoiseSocket, RawWebSocket, HandshakeResult } from "./transport/noise/noise-handshake.ts";
+export { doHandshake, WA_CERT_PUB_KEY, WA_HEADER } from "./transport/noise/noise-handshake.js";
+export type { NoiseSocket, RawWebSocket, HandshakeResult } from "./transport/noise/noise-handshake.js";

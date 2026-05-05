@@ -1,10 +1,10 @@
 import { EventEmitter } from "node:events";
-import { logger } from "./utils/logger.ts";
-export { FBClient } from "./core/client.ts";
-export { E2EEService } from "./services/e2ee.service.ts";
+import { logger } from "./utils/logger.js";
+export { FBClient } from "./core/client.js";
+export { E2EEService } from "./services/e2ee.service.js";
 
-export type { ClientOptions, SessionData, MessengerEventMap, ConnectE2EEOptions } from "./models/client.ts";
-export type { AuthConfig, AppEnv } from "./models/config.ts";
+export type { ClientOptions, SessionData, MessengerEventMap, ConnectE2EEOptions } from "./models/client.js";
+export type { AuthConfig, AppEnv } from "./models/config.js";
 export type {
   Attachment,
   Mention,
@@ -13,13 +13,13 @@ export type {
   MessengerEvent,
   E2EEMessage,
   E2EEMessageKind,
-} from "./models/domain.ts";
+} from "./models/domain.js";
 export type {
   SendMessageInput,
   SendMediaInput,
   SendReactionInput,
   TypingInput,
-} from "./models/messaging.ts";
+} from "./models/messaging.js";
 export type {
   E2EESendTextOptions,
   E2EESendTextResult,
@@ -28,18 +28,18 @@ export type {
   E2EEDecryptMediaOptions,
   E2EEDownloadOptions,
   E2EEDownloadResult,
-} from "./models/e2ee.ts";
+} from "./models/e2ee.js";
 export type {
   MediaUploadConfig,
   MediaUploadResult,
   MmsTypeStr,
-} from "./models/media.ts";
+} from "./models/media.js";
 
 /**
  * Factory that gives the consumer control over the FME logger.
  *
  * When emitLogger is true, all internal library log output (from every module
- * that imports utils/logger.ts) is routed through the returned fmeLogger
+ * that imports utils/logger.js) is routed through the returned fmeLogger
  * EventEmitter instead of console. Mirrors the fcaInstance pattern from
  * fca-unofficial so a bot using both libraries can pipe all logs into one sink.
  *

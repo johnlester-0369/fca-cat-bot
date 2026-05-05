@@ -1,8 +1,8 @@
 import { EventEmitter } from "node:events";
-import type { MessengerEvent, MessengerMessage, Attachment, E2EEMessage, E2EEMessageKind } from "../models/domain.ts";
-import { str, num, now } from "../utils/fca-utils.ts";
-import type { MediaService } from "../services/media.service.ts";
-import type { E2EEService } from "../services/e2ee.service.ts";
+import type { MessengerEvent, MessengerMessage, Attachment, E2EEMessage, E2EEMessageKind } from "../models/domain.js";
+import { str, num, now } from "../utils/fca-utils.js";
+import type { MediaService } from "../services/media.service.js";
+import type { E2EEService } from "../services/e2ee.service.js";
 
 export class EventMapper {
   constructor(
@@ -292,7 +292,7 @@ export class EventMapper {
   public emit(event: MessengerEvent): void {
     // Node's EventEmitter treats "error" specially: emitting it without a
     // typed error listener throws ERR_UNHANDLED_ERROR and can kill long-running
-    // listeners such as tests/script/echo-e2ee.ts.  We still always emit the
+    // listeners such as tests/script/echo-e2ee.js.  We still always emit the
     // catch-all "event" below, so client.onEvent(listener) receives the error.
     if (event.type !== "error" || this.eventBus.listenerCount("error") > 0) {
       this.eventBus.emit(event.type as any, event.data);

@@ -1,4 +1,4 @@
-import type { Thread } from "./domain.ts";
+import type { Thread } from "./domain.js";
 
 export interface GetThreadListInput {
   limit: number;

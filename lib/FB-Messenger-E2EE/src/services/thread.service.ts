@@ -1,11 +1,11 @@
-import type { MinimalFCAApi } from "./facebook-gateway.service.ts";
+import type { MinimalFCAApi } from "./facebook-gateway.service.js";
 
 import type {
   Attachment,
   MessengerMessage,
   Thread,
   UserInfo,
-} from "../models/domain.ts";
+} from "../models/domain.js";
 import type {
   AddGroupMemberInput,
   ChangeAdminStatusInput,
@@ -17,8 +17,8 @@ import type {
   GetThreadListInput,
   RemoveGroupMemberInput,
   ThreadDetails,
-} from "../models/thread.ts";
-import type { MediaService } from "./media.service.ts";
+} from "../models/thread.js";
+import type { MediaService } from "./media.service.js";
 
 
 // ThreadService

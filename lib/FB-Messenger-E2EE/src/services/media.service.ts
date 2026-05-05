@@ -1,16 +1,16 @@
 import * as https from "node:https";
 import * as http from "node:http";
-import { str, num } from "../utils/fca-utils.ts";
+import { str, num } from "../utils/fca-utils.js";
 
 
-import type { MinimalFCAApi } from "./facebook-gateway.service.ts";
+import type { MinimalFCAApi } from "./facebook-gateway.service.js";
 
 import type {
   Attachment,
   BaseAttachment,
   Thread,
   UserInfo,
-} from "../models/domain.ts";
+} from "../models/domain.js";
 import type {
   CreateThreadInput,
   DeleteThreadInput,
@@ -23,9 +23,9 @@ import type {
   SendMediaInput,
   SendStickerInput,
   SetGroupPhotoInput,
-} from "../models/messaging.ts";
-import type { MediaUploadResult } from "../models/media.ts";
-import { FacebookGatewayService } from "./facebook-gateway.service.ts";
+} from "../models/messaging.js";
+import type { MediaUploadResult } from "../models/media.js";
+import { FacebookGatewayService } from "./facebook-gateway.service.js";
 
 export class MediaService {
   public constructor(private readonly gateway: FacebookGatewayService) { }

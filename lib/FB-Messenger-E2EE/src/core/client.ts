@@ -1,19 +1,19 @@
-import type { MessengerEvent } from "../models/domain.ts";
+import type { MessengerEvent } from "../models/domain.js";
 import type {
   SendMediaInput,
   SendMessageInput,
   SendReactionInput,
   TypingInput,
-} from "../models/messaging.ts";
-import type { ClientOptions, MessengerEventMap, ConnectE2EEOptions } from "../models/client.ts";
-import { TypedEventEmitter } from "../types/advanced-types.ts";
-import { ClientController } from "../controllers/client.controller.ts";
-import { FileSessionRepository } from "../repositories/session.repository.ts";
-import { AuthService } from "../services/auth.service.ts";
-import { E2EEService } from "../services/e2ee.service.ts";
-import { FacebookGatewayService } from "../services/facebook-gateway.service.ts";
-import { MediaService } from "../services/media.service.ts";
-import { ICDCService } from "../services/icdc.service.ts";
+} from "../models/messaging.js";
+import type { ClientOptions, MessengerEventMap, ConnectE2EEOptions } from "../models/client.js";
+import { TypedEventEmitter } from "../types/advanced-types.js";
+import { ClientController } from "../controllers/client.controller.js";
+import { FileSessionRepository } from "../repositories/session.repository.js";
+import { AuthService } from "../services/auth.service.js";
+import { E2EEService } from "../services/e2ee.service.js";
+import { FacebookGatewayService } from "../services/facebook-gateway.service.js";
+import { MediaService } from "../services/media.service.js";
+import { ICDCService } from "../services/icdc.service.js";
 
 /**
  * E2EE-only Messenger client facade.

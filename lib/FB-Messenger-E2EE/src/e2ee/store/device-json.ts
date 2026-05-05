@@ -1,4 +1,4 @@
-import type { DeviceJSON } from "../../models/e2ee.ts";
+import type { DeviceJSON } from "../../models/e2ee.js";
 
 export const DEVICE_STORE_SCHEMA_VERSION = 1;
 

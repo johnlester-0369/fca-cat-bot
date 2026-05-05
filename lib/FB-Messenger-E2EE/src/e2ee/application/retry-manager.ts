@@ -1,11 +1,11 @@
-import type { E2EEClient } from "./e2ee-client.ts";
-import type { OutboundMessageCache, RecentE2EEOutgoing } from "./outbound-message-cache.ts";
-import { parseMessengerJid, sameMessengerUser } from "./fanout-planner.ts";
-import type { FacebookE2EESocket } from "../transport/noise/noise-socket.ts";
-import { encodeNode, marshal, type Node } from "../transport/binary/wa-binary.ts";
-import type { RawPreKeyBundle } from "../../models/e2ee.ts";
-import { now, str } from "../../utils/fca-utils.ts";
-import { logger } from "../../utils/logger.ts";
+import type { E2EEClient } from "./e2ee-client.js";
+import type { OutboundMessageCache, RecentE2EEOutgoing } from "./outbound-message-cache.js";
+import { parseMessengerJid, sameMessengerUser } from "./fanout-planner.js";
+import type { FacebookE2EESocket } from "../transport/noise/noise-socket.js";
+import { encodeNode, marshal, type Node } from "../transport/binary/wa-binary.js";
+import type { RawPreKeyBundle } from "../../models/e2ee.js";
+import { now, str } from "../../utils/fca-utils.js";
+import { logger } from "../../utils/logger.js";
 
 export interface E2EERetryManagerOptions {
   cache: OutboundMessageCache;

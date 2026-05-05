@@ -1,4 +1,4 @@
-import type { MediaUploadConfig, MediaUploadResult, MmsTypeStr } from "../../models/media.ts";
+import type { MediaUploadConfig, MediaUploadResult, MmsTypeStr } from "../../models/media.js";
 export type { MediaUploadConfig, MediaUploadResult, MmsTypeStr };
 
 export function toMediaUploadToken(fileEncSHA256: Buffer): string {

@@ -1,5 +1,5 @@
 import { inflateSync } from "node:zlib";
-import { BinaryToken, DoubleByteTokens, SingleByteTokens } from "./tokens.ts";
+import { BinaryToken, DoubleByteTokens, SingleByteTokens } from "./tokens.js";
 
 export interface Node {
   tag: string;
