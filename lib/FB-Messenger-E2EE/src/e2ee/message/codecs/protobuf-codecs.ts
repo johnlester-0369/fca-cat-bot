@@ -9,7 +9,8 @@ const __dirname = dirname(__filename);
 
 const root = new ((protobuf as any).default?.Root || protobuf.Root)();
 root.resolvePath = (origin: string, target: string) => {
-  return join(__dirname, "../proto", target);
+  // 4 levels up from dist/e2ee/message/codecs/ reaches FB-Messenger-E2EE/proto/
+  return join(__dirname, "../../../../proto", target);
 };
 root.loadSync([
   "WACommon.proto",
