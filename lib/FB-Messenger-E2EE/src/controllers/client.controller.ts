@@ -14,7 +14,7 @@ import {
 } from "../e2ee/transport/binary/wa-binary.ts";
 import type { DGWEndpointKind } from "../e2ee/transport/dgw/dgw-socket.ts";
 import type { Node } from "../e2ee/transport/binary/wa-binary.ts";
-import type { SessionData } from "../models/client.ts";
+import type { SessionData, ConnectE2EEOptions } from "../models/client.ts";
 import type { MediaUploadConfig } from "../models/media.ts";
 import type { MediaFields } from "../models/e2ee.ts";
 import type {
@@ -160,9 +160,20 @@ export class ClientController {
     await this.e2eeSocket.sendFrame(encodeKeepAlive(id));
   }
 
-  public async connectE2EE(deviceStorePath: string, userId: string): Promise<void> {
+  public async connectE2EE(opts: ConnectE2EEOptions): Promise<void> {
+    const { userId, deviceData, onUpdateDevice } = opts;
     this.userId = userId;
-    const ds = await DeviceStore.fromFile(deviceStorePath);
+
+    // Consumer owns persistence — library never touches the filesystem.
+    // fromData() and memoryOnly() both accept onUpdateDevice so every saveToFile()
+    // call (new sessions, JID assignment, prekey rotation) is forwarded to the caller.
+    let ds: DeviceStore;
+    if (deviceData !== undefined) {
+      const json = typeof deviceData === "string" ? deviceData : JSON.stringify(deviceData);
+      ds = await DeviceStore.fromData(json, onUpdateDevice);
+    } else {
+      ds = await DeviceStore.memoryOnly(onUpdateDevice);
+    }
     this.activeDeviceStore = ds;
 
     const client = new E2EEClient(ds);
