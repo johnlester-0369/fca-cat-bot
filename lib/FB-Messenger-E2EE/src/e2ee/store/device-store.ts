@@ -155,9 +155,13 @@ export class DeviceStore
     return ds;
   }
 
-  /** Create a fresh in-memory device (nothing persisted). */
-  static async memoryOnly(): Promise<DeviceStore> {
+  /** Create a fresh in-memory device (nothing persisted).
+   *  onDataChanged mirrors the fromData() contract: the callback fires on every
+   *  saveToFile() call so the consumer can persist new key material without the
+   *  library touching the filesystem. */
+  static async memoryOnly(onDataChanged?: (json: string) => void): Promise<DeviceStore> {
     const ds = new DeviceStore("");
+    ds.onDataChanged = onDataChanged;
     await ds.initNew();
     return ds;
   }
