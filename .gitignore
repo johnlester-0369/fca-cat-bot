@@ -1,0 +1,11 @@
+node_modules/
+
+src/test.ts
+
+appstate.json
+
+session.json
+
+device-100000102698581.json
+
+outbound_frames.log
