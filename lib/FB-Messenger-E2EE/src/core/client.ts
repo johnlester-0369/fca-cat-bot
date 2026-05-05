@@ -5,7 +5,7 @@ import type {
   SendReactionInput,
   TypingInput,
 } from "../models/messaging.ts";
-import type { ClientOptions, MessengerEventMap } from "../models/client.ts";
+import type { ClientOptions, MessengerEventMap, ConnectE2EEOptions } from "../models/client.ts";
 import { TypedEventEmitter } from "../types/advanced-types.ts";
 import { ClientController } from "../controllers/client.controller.ts";
 import { FileSessionRepository } from "../repositories/session.repository.ts";
@@ -107,8 +107,8 @@ export class FBClient {
 
   // E2EE lifecycle
 
-  public async connectE2EE(deviceStorePath: string, userId: string): Promise<void> {
-    await this.controller.connectE2EE(deviceStorePath, userId);
+  public async connectE2EE(opts: ConnectE2EEOptions): Promise<void> {
+    await this.controller.connectE2EE(opts);
   }
 
   public async sendNoiseKeepAlive(): Promise<void> {
