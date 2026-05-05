@@ -44,7 +44,7 @@ export { fmeInstance } from "@johnlester-0369/fb-messenger-e2ee";
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // Client lifecycle
-export type { ClientOptions, SessionData, MessengerEventMap } from "@johnlester-0369/fb-messenger-e2ee";
+export type { ClientOptions, SessionData, MessengerEventMap, ConnectE2EEOptions } from "@johnlester-0369/fb-messenger-e2ee";
 
 // Configuration
 export type { AuthConfig, AppEnv } from "@johnlester-0369/fb-messenger-e2ee";
