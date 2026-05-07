@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "@johnlester-0369/fb-messenger-e2ee": "^0.1.4",
-    "@johnlester-0369/fca-unofficial": "^3.0.35"
+    "@johnlester-0369/fca-unofficial": "^3.0.36"
   },
   "devDependencies": {
     "tsx": "^4.21.0",
